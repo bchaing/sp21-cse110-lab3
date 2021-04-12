@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang=”en”>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Journal Entries</title>
+        <link rel="icon" href="favicon.svg" type="image/gif" sizes="16x16"> 
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div><h1>A Day in the Life</h1></div>
+                <a href="#today">Today's Entry</a>
+                <a href="#yesterday">Yesterday's Entry</a>
+                <a href="#twodays">Two Days Ago Entry</a>
+            </nav>
+        </header>
+
+        <br>
+        <main>
+            <section id="today">
+                <h1>A Catchup Day</h1>
+                <h2>April 10, 2021</h2>
+                <audio controls>
+                    <source src="lofi.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio> <span><- some lofi hip hop for studying.</span> <br>
+                <strong>Finished up homework!</strong>
+                <p>I spend most of today catching up on missed lecture, finishing up homework, and filling out some applications that I've been meaning to complete.
+                    It was nice to be able to spend a day to catch up on everything with less stress.
+                </p> 
+                <h3>Highlights</h3>
+                <ul>
+                    <li>Finished up some homework</li>
+                    <li>Got an interview for an on campus job</li>
+                </ul>
+                <details>
+                    <summary>Todos</summary>
+                    <ol>
+                        <li>Finish up remain homework</li>
+                        <li>Prepare for interview</li>
+                        <li>Get a good amount of sleep</li>
+                    </ol>
+                </details>
+            </section>
+            <hr>
+            <section id="yesterday">
+                <h1>In it for the Long Run</h1>
+                <h2>April 9, 2021</h2>
+                <img src="torrypinesreserve.jpg" alt="Torry Pines State Reserve" width="500" height="300">
+                <p>The main thing that I did today was go on a long run. I ran about <b>6 miles</b> which is more than what I have been usually running. 
+                    It was a nice way to take my mind off of school and also explore the <i>Torrey Pines State Reserve.</i></p> 
+                <h3>Highlights</h3>
+                <ul>
+                    <li>Went on a fun run to explore the area</li>
+                    <li>Finished up some homework for the week</li>
+                </ul>
+                <details>
+                    <summary>Todos</summary>
+                    <ol>
+                        <li>Fill out ENG 100D survey</li>
+                        <li>Go on a run</li>
+                    </ol>
+                </details>
+            </section>
+            <hr>
+            <section id="twodays">
+                <h1>Hanging out with Friends</h1>
+                <h2>April 8, 2021</h2>
+                <video width="320" height="240" controls>
+                    <source src="leds.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video> 
+                <p>Today, there was a <em>Chancellor Scholars Alliance</em> (CSA), which is a student org for students
+                recieving the Chancellor Scholars scholarship. We got to meet up <i>(virtually)</i> with Scholars
+                from other cohorts and have fun for the evening. I also had some time to work on an led project I've been working on.</p> 
+                <h3>Highlights</h3>
+                <ul>
+                    <li>Fun GBM with CSA</li>
+                    <li>Worked on LED project</li>
+                </ul>
+                <details>
+                    <summary>Todos</summary>
+                    <ol>
+                        <li>Watch Lectures</li>
+                        <li>Start Homework</li>
+                    </ol>
+                </details>
+            </section>
+        </main>
+
+        <br>
+        <footer>
+            <h4>Submit a New Post</h4>
+            <form>
+                <table>
+                    <tr>
+                        <th>Title:</th>
+                        <th>Date:</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Enter Title Here"><br></td>
+                        <td><input type="date"><br></td>
+                    </tr>
+                </table>
+
+                <label>Entry Body:</label><br>
+                <textarea rows="4" cols="35">Enter Journal Text Here</textarea><br>
+                <label for="ice-cream-choice">What day is the entry for?</label>
+                <input list="relativedate" id="relative-dates" name="relative-dates" />
+                
+                <datalist id="relativedate">
+                    <option value="Yesterday">
+                    <option value="Two Days Ago">
+                    <option value="Today">
+                    <option value="None">
+                </datalist><br>
+
+                <label for="media-select">Choose a media format for the entry:</label>
+
+                <select name="media" id="media-select">
+                    <option value="">--Please choose an option--</option>
+                    <option value="video">Video</option>
+                    <option value="audio">Audio</option>
+                    <option value="image">Image</option>
+                    <option value="none">None</option>
+                </select><br>
+
+                <label>Privacy Setting:</label><br>
+                <input type="radio" id="public" name="privacy" value="public">
+                <label for="public">Public</label><br>
+                <input type="radio" id="private" name="privacy" value="private">
+                <label for="private">Private</label><br>
+                <input type="radio" id="unlisted" name="privacy" value="unlisted">
+                <label for="unlisted">Unlisted</label> <br>
+                <input type="checkbox"> 
+                
+
+                <label>I am ready to publish!</label><br>
+                <input type="submit">
+
+                <button type="button">
+                    Add to favorites
+                </button>
+            </form>
+        </footer>
+    </body>
+</html>
