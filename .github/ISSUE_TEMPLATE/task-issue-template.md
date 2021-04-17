@@ -2,8 +2,8 @@
 name: Task issue template
 about: Template for "todo" tasks and issues.
 title: "[TODO]"
-labels: ''
-assignees: ''
+labels: todo
+assignees: bchaing
 
 ---
 
