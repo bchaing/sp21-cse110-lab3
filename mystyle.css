@@ -1,0 +1,133 @@
+@font-face {    /* 3rd party font */
+    font-family: "raleway";
+    src: url("Raleway-VariableFont_wght.ttf");
+}
+
+@media (max-width: 900px) { /* media query */
+    img {
+        display: none;
+    }
+}
+
+* { /* universal selector */
+    color: hsl(196, 29%, 13%);  /* color for all elements */
+    font-family: "raleway";
+}
+
+
+body {  /* element selector */
+    background-color: rgb(58, 175, 169); /* change background color of whole body */
+}
+
+header {
+    color:white; /* set the color of the header text */
+    background-color: #17252a; /* set the background color of header */
+
+    border-width:5px;   /* set width of header border */
+    border-style:groove;    /* set styling or header border */
+    border-color:#DEF2F1;   /* set color of header border */
+    border-radius: 2mm;     /* set radius of header border */
+
+    margin-top: 1vw;    /* top margin value of header */
+    margin-right: 5vw;  /* right margin value of header */
+    margin-left: 0vw;   /* left margin value of header */
+    margin-bottom: 1vw; /* bottom margin value of header */
+
+    padding-top: 20pt;   /* top margin value of header */
+    padding-right: 10pt;    /* right margin value of header */
+    padding-left: 10pt; /* left margin value of header */
+    padding-bottom: 10pt;   /* bottom margin value of header */
+
+    display: grid;
+}
+
+a {
+    color: #FFFFFF; /* link color */
+    padding: 0px 15px 0px 15px;
+    margin: auto;
+    text-align: center;
+}
+
+a:hover {
+    color: rgb(222, 242, 241);
+}
+
+a:active {  /* pseudo-class selector */
+    color: #2B7A77;
+}
+
+h1, h2 {    /* selector list */
+    color: hsl(196, 29%, 13%); /* color for largest headings */
+    text-decoration: underline;
+    display: block;
+    margin: -1em 0em 1em 0em;   /* short margin values for h2 */
+    padding: 1ex 1ex 0ex 1ex;   /* short padding values for h2 */
+}
+
+img {
+    max-width: fit-content;
+    max-height: fit-content;
+    position: static;
+    width: 30vw;
+}
+
+audio {
+    display: inline-block;
+    position: sticky;
+    width: 30vw;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+section {
+    width: 30vw;
+    padding-top: 10pt;
+}
+
+hr {
+    margin: 1em 1em 1em 1em;
+}
+
+form {  /* css for form */
+    display: grid;
+    align-self: center;
+    grid-template-columns: 50ex 50ex;
+    justify-items: start;
+}
+
+#today {    /* id selector */
+    background-color: hsl(177, 65%, 33%);
+}
+
+.date { /* class selector */
+    color: hsl(193, 55%, 13%);
+}
+
+a[href="#today"] {  /* attribute selector */
+    color:hsl(195, 19%, 65%);
+}
+
+div label { /* descendent combinator */
+    text-decoration: underline;
+}
+
+details > summary { /* child combinator */
+    text-decoration: underline;
+}
+
+video ~ p { /* general sibling combinator */
+    color: hsl(193, 55%, 20%);
+}
+
+img + p {   /* adjacent sibling combinator */
+    margin-top: 15px;
+}
+
+h4.title {  /* combinging two selectors */
+    text-decoration: underline;
+}

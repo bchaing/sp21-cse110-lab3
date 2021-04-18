@@ -5,11 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Journal Entries</title>
         <link rel="icon" href="favicon.svg" type="image/gif" sizes="16x16"> 
+        <link rel="stylesheet" href="mystyle.css">
+
+        <style>
+            video {
+                width: 30vw;
+            }
+        </style>
     </head>
     <body>
         <header>
             <nav>
-                <div><h1>A Day in the Life</h1></div>
+                <div class="title"><h1 style="color:white;">A Day in the Life</h1></div>
                 <a href="#today">Today's Entry</a>
                 <a href="#yesterday">Yesterday's Entry</a>
                 <a href="#twodays">Two Days Ago Entry</a>
@@ -20,7 +27,7 @@
         <main>
             <section id="today">
                 <h1>A Catchup Day</h1>
-                <h2>April 10, 2021</h2>
+                <h2 class="date">April 10, 2021</h2>
                 <audio controls>
                     <source src="lofi.mp3" type="audio/mpeg">
                   Your browser does not support the audio element.
@@ -46,7 +53,7 @@
             <hr>
             <section id="yesterday">
                 <h1>In it for the Long Run</h1>
-                <h2>April 9, 2021</h2>
+                <h2 class="date">April 9, 2021</h2>
                 <img src="torrypinesreserve.jpg" alt="Torry Pines State Reserve" width="500" height="300">
                 <p>The main thing that I did today was go on a long run. I ran about <b>6 miles</b> which is more than what I have been usually running. 
                     It was a nice way to take my mind off of school and also explore the <i>Torrey Pines State Reserve.</i></p> 
@@ -66,7 +73,7 @@
             <hr>
             <section id="twodays">
                 <h1>Hanging out with Friends</h1>
-                <h2>April 8, 2021</h2>
+                <h2 class="date">April 8, 2021</h2>
                 <video width="320" height="240" controls>
                     <source src="leds.mp4" type="video/mp4">
                   Your browser does not support the video tag.
@@ -91,23 +98,25 @@
 
         <br>
         <footer>
-            <h4>Submit a New Post</h4>
+            <h4 class="title">Submit a New Post</h4>
             <form>
-                <table>
-                    <tr>
-                        <th>Title:</th>
-                        <th>Date:</th>
-                    </tr>
-                    <tr>
-                        <td><input type="text" placeholder="Enter Title Here"><br></td>
-                        <td><input type="date"><br></td>
-                    </tr>
-                </table>
+                <div>
+                    <label>Title</label>
+                    <input type="text" placeholder="Enter Title Here">
+                </div>
+                <div>
+                    <label>Date</label>
+                    <input type="date">
+                </div>
 
-                <label>Entry Body:</label><br>
-                <textarea rows="4" cols="35">Enter Journal Text Here</textarea><br>
-                <label>What day is the entry for?</label>
-                <input list="relativedate" id="relative-dates" name="relative-dates" />
+                <div>
+                    <label>Entry Body:</label><br>
+                    <textarea rows="4" cols="35">Enter Journal Text Here</textarea>
+                </div>
+                <div>
+                    <label>What day is the entry for?</label>
+                    <input list="relativedate" id="relative-dates" name="relative-dates" />
+                </div>
                 
                 <datalist id="relativedate">
                     <option value="Yesterday">
@@ -116,27 +125,32 @@
                     <option value="None">
                 </datalist><br>
 
-                <label for="media-select">Choose a media format for the entry:</label>
+                <div>
+                    <label for="media-select">Choose a media format for the entry:</label>
 
-                <select name="media" id="media-select">
-                    <option value="">--Please choose an option--</option>
-                    <option value="video">Video</option>
-                    <option value="audio">Audio</option>
-                    <option value="image">Image</option>
-                    <option value="none">None</option>
-                </select><br>
+                    <select name="media" id="media-select">
+                        <option value="">--Please choose an option--</option>
+                        <option value="video">Video</option>
+                        <option value="audio">Audio</option>
+                        <option value="image">Image</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
 
-                <label>Privacy Setting:</label><br>
-                <input type="radio" id="public" name="privacy" value="public">
-                <label for="public">Public</label><br>
-                <input type="radio" id="private" name="privacy" value="private">
-                <label for="private">Private</label><br>
-                <input type="radio" id="unlisted" name="privacy" value="unlisted">
-                <label for="unlisted">Unlisted</label> <br>
-                <input type="checkbox"> 
+                <div>
+                    <label>Privacy Setting:</label><br>
+                    <input type="radio" id="public" name="privacy" value="public">
+                    <label for="public">Public</label><br>
+                    <input type="radio" id="private" name="privacy" value="private">
+                    <label for="private">Private</label><br>
+                    <input type="radio" id="unlisted" name="privacy" value="unlisted">
+                    <label for="unlisted">Unlisted</label> <br>
+                    
+                <div>
+                    <input type="checkbox">
+                    <label>I am ready to publish!</label><br>
+                </div>
                 
-
-                <label>I am ready to publish!</label><br>
                 <input type="submit">
 
                 <button type="button">
